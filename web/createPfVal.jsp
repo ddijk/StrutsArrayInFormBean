@@ -18,7 +18,7 @@
   <body>
     <h1>Hello World!</h1>
     <html:errors/>
-    <html:form action="/createPf">
+    <html:form action="/createPfVal">
 
 
       <%--
@@ -27,10 +27,11 @@
       <html:text property="name[1]" size="10" value=""></html:text>
       <html:text property="name[2]" size="10" value=""></html:text>
       </logic:iterate>
-      --%>
-      <input name="name[0]" size="10" value="">
+        <input name="name[0]" size="10" value="">
       <input name="name[1]" size="10" value="">
       <input name="name[2]" size="10" value="">
+      --%>
+
 
       <html:text property="number" size="10"></html:text>
       <html:submit value="ok"/>

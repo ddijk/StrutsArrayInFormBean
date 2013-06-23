@@ -8,9 +8,9 @@
 <struts-config>
     <form-beans>
       <form-bean name="PortfolioForm" type="web.PortfolioForm"></form-bean>
+       <form-bean name="PortfolioValidatorForm" type="web.PortfolioValidatorForm"></form-bean>
        <form-bean name="PortfolioDynaForm" type="web.MyDynaForm">
          <form-property name="number" type="java.lang.Integer"/>
-          <form-property name="name" type="java.lang.String[]" />
        </form-bean>
       <form-bean name="StrutsDynaActionForm" type="web.StrutsDynaActionForm"/>
     </form-beans>
@@ -24,8 +24,9 @@
     </global-forwards>
 
     <action-mappings>
-        <action path="/Welcome"  name="PortfolioDynaForm" forward="/welcomeStruts.jsp"/>
-         <action path="/createPf" name="PortfolioDynaForm" forward="/pf.jsp"/>
+        <action path="/Welcome" forward="/welcomeStruts.jsp"/>
+         <action path="/createPf" name="PortfolioDynaForm" scope="request" forward="/pf.jsp" validate="true" input="/createPf.jsp"/>
+          <action path="/createPfVal" name="PortfolioValidatorForm" forward="/pf.jsp" validate="true" input="/createPfVal.jsp"/>
     </action-mappings>
 
 
