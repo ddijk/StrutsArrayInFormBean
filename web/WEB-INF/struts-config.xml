@@ -8,7 +8,7 @@
 <struts-config>
     <form-beans>
       <form-bean name="PortfolioForm" type="web.PortfolioForm"></form-bean>
-       <form-bean name="PortfolioDynaForm" type="org.apache.commons.beanutils.LazyDynaBean">
+       <form-bean name="PortfolioDynaForm" type="web.MyDynaForm">
          <form-property name="number" type="java.lang.Integer"/>
           <form-property name="name" type="java.lang.String[]" />
        </form-bean>

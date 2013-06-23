@@ -11,9 +11,10 @@ import org.apache.struts.validator.LazyValidatorForm;
  *
  * @author DickD
  */
-public class MyDynaForm extends LazyDynaBean
+public class MyDynaForm extends LazyValidatorForm
 {
   //@Override
+  @Override
   public ActionErrors validate(ActionMapping mapping, HttpServletRequest request)
   {
     ActionErrors errors = new ActionErrors();
