@@ -17,7 +17,7 @@
   </head>
   <body>
     <h1>Hello World!</h1>
-    <html:errors/>
+    <html:errors />
     <html:form action="/createPf">
 
 
@@ -31,8 +31,11 @@
       <input name="name[0]" size="10" value="">
       <input name="name[1]" size="10" value="">
       <input name="name[2]" size="10" value="">
-
-      <html:text property="number" size="10"></html:text>
+      <br>
+      namex<input name="namex[0]" size="10" value="">
+      <br>
+      number<html:text property="number" size="10"></html:text>
+      number2<html:text property="number2" size="10"></html:text>
       <html:submit value="ok"/>
     </html:form>
   </body>

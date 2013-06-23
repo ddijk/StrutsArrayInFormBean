@@ -9,10 +9,7 @@
     <form-beans>
       <form-bean name="PortfolioForm" type="web.PortfolioForm"></form-bean>
        <form-bean name="PortfolioValidatorForm" type="web.PortfolioValidatorForm"></form-bean>
-       <form-bean name="PortfolioDynaForm" type="web.MyDynaForm">
-         <form-property name="number" type="java.lang.Integer"/>
-       </form-bean>
-      <form-bean name="StrutsDynaActionForm" type="web.StrutsDynaActionForm"/>
+       <form-bean name="PortfolioDynaForm" type="web.MyDynaForm"/>
     </form-beans>
 
     <global-exceptions>

@@ -24,10 +24,11 @@ public class MyDynaForm extends LazyValidatorForm
 //      // TODO: add 'error.name.required' key to your resources
 //    }
     System.out.println("Validation called");
-    List<String> names = (List<String>) get("name");
+    List<String> names = (List<String>) get("namex");
+    System.out.println("namex is null?" + (names == null));
     for (String n : names)
     {
-      System.out.println("Validating " + n);
+      System.out.println("Validating name " + n);
 
     }
     System.out.println("Validating number, value is " + get("number"));

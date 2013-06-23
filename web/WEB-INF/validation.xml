@@ -44,7 +44,7 @@
       <field
         property="number"
         depends="required, intRange">
-        <arg key="logonForm.username"/>
+        <arg key="myfield"/>
         <arg1 name="intRange" key="${var:min}" resource="false"/>
         <arg2 name="intRange" key="${var:max}" resource="false"/>
         <var>
@@ -56,7 +56,29 @@
           <var-value>7</var-value>
         </var>
       </field>
-
+      <field
+        property="number2"
+        depends="intRange">
+        <arg key="myfield2"/>
+        <arg1 name="intRange" key="${var:min}" resource="false"/>
+        <arg2 name="intRange" key="${var:max}" resource="false"/>
+        <var>
+          <var-name>min</var-name>
+          <var-value>5</var-value>
+        </var>
+        <var>
+          <var-name>max</var-name>
+          <var-value>7</var-value>
+        </var>
+      </field>
+      <field property="name" indexedListProperty="name" depends="minlength">
+        <arg0 name="minlength" key="myname"/>
+        <arg1 name="minlength" key="${var:minlength}" resource="false"/>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>3</var-value>
+        </var>
+      </field>
     </form>
     <form name="PortfolioValidatorForm">
       <field
@@ -74,6 +96,7 @@
           <var-value>7</var-value>
         </var>
       </field>
+
 
     </form>
 
